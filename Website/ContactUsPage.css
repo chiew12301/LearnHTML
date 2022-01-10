@@ -81,16 +81,82 @@
     line-height: 25px;
 }
 
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(50%);
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(255, 255, 255, 0.19);
+}
+
+.left{
+    height: 100%;
+    background-image: url("Background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.right{
+    padding: 25px 40px;
+}
+
+h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color:black;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius:2px;
+    background-color: #2ecc71;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0,0,0,0);
+    background-color: rgba(230,230,230,0.75);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+.field:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30,85,250,0.47);
+}
+
+.area{
+    min-height: 150px;
+}
+
 button{
     width: 200px;
-    padding: 15px 0;
+    padding: 0.5rem 1rem;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #009688;
     background: transparent;
-    color: #fff;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -114,4 +180,14 @@ button:hover span{
 
 button:hover{
     border: none;
+}
+
+@media screen and (max-width:880px){
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+
+    .left{
+        height: 200px;
+    }
 }
